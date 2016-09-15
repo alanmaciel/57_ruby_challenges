@@ -8,9 +8,14 @@
 #
 loop do
   puts "\nWhat is the input string?"
-  answer = gets.chomp.downcase
-  char_count = answer.length
-  message =  "\n#{answer.capitalize} has #{char_count} characters."
-  
-  puts message
+  answer = gets.chomp
+  case answer
+  when ''
+    puts "You must enter something into the program."
+  else
+    char_count = answer.length
+    message =  "\n#{answer} has #{char_count} characters."
+    
+    puts message
+  end
 end
