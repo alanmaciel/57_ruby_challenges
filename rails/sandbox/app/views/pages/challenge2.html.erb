@@ -1,0 +1,20 @@
+<h2>Example 2</h2>
+<p>
+    Enter an input string and displays output that shows the input string and
+    the number of characters the string contains
+</p>
+<p>
+    If the user enters nothing, state that the user must enter something
+    into the program.
+</p>
+<%= form_tag '/pages/challenge2', remote: true, id: "foo_form" do %>
+  <%= label_tag 'What is the input string?' %>
+  <%= text_field_tag :input_string, params[:input_string],
+    onkeyup: "countCharNumbers($('#input_string').val(), result)" %>
+<% end %>
+<hr/>
+<div id="result">
+</div>
+
+<hr/>
+<%= link_to "Back", root_path %>
