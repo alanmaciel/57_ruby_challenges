@@ -16,14 +16,19 @@ loop do
   first_number = gets.chomp.to_i
   puts "What is the second number? "
   second_number = gets.chomp.to_i
-  sum = first_number + second_number
-  difference = first_number - second_number
-  product = first_number * second_number
-  quotient = first_number / second_number
+  if first_number > 0 && second_number > 0
 
-  puts "#{first_number} + #{second_number} = #{sum}"
-  puts "#{first_number} - #{second_number} = #{difference}"
-  puts "#{first_number} * #{second_number} = #{product}"
-  puts "#{first_number} / #{second_number} = #{quotient}"
 
+    sum = first_number + second_number
+    difference = first_number - second_number
+    product = first_number * second_number
+    quotient = first_number / second_number
+
+    puts "#{first_number} + #{second_number} = #{sum}"
+    puts "#{first_number} - #{second_number} = #{difference}"
+    puts "#{first_number} * #{second_number} = #{product}"
+    puts "#{first_number} / #{second_number} = #{quotient}"
+  else
+    puts "Please enter only numeric greater than 0 and positive values."
+  end
 end
