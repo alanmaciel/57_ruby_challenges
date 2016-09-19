@@ -10,6 +10,21 @@
 # 10 * 5 = 50
 # 10 / 5 = 2 
 #
+def sum(n1, n2)
+  n1 + n2
+end
+
+def difference(n1, n2)
+ n1 - n2
+end
+
+def product(n1, n2)
+  n1 * n2
+end
+
+def quotient(n1, n2)
+  n1 / n2
+end
 
 loop do
   puts "What is the first number? "
@@ -19,10 +34,10 @@ loop do
   if first_number > 0 && second_number > 0
 
 
-    sum = first_number + second_number
-    difference = first_number - second_number
-    product = first_number * second_number
-    quotient = first_number / second_number
+    sum = sum(first_number, second_number)
+    difference = difference(first_number, second_number)
+    product = product(first_number, second_number)
+    quotient = quotient(first_number, second_number)
 
     puts "#{first_number} + #{second_number} = #{sum}"
     puts "#{first_number} - #{second_number} = #{difference}"
