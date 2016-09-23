@@ -1,0 +1,45 @@
+<h2>Example 5 - Simple Math</h2>
+<p>
+  Program that prompts for two numbers, print the sum, difference, product
+  and quotient of those numbers as following
+</p>
+<p>
+    Output:<br />
+    What is the first number? 10<br />
+    What is the second number? 5<br />
+</p>
+<p>
+     10 + 5 = 15<br />
+     10 - 5 = 5<br />
+     10 * 5 = 50<br />
+     10 / 5 = 2<br />
+</p>
+<p>
+    Enter an input string and displays output that shows the input string and
+    the number of characters the string contains
+</p>
+<p>
+    If the user enters nothing, state that the user must enter something
+    into the program.
+</p>
+<%= form_tag '/pages/example5', remote: true, id: "foo_form" do %>
+  <%= label_tag 'First number' %>
+  <%= text_field_tag :first_number, params[:first_number], value: 0,
+    onkeyup: "doSomeMath($('#first_number').val(), $('#second_number').val())" %>
+  <%= label_tag 'Second number' %>
+  <%= text_field_tag :second_number, params[:second_number], value: 0,
+    onkeyup: "doSomeMath($('#first_number').val(), $('#second_number').val())" %>
+<% end %>
+<hr/>
+<div id="message">
+    
+</div>
+<div id="results">
+   <div id='sum'></div><br />
+   <div id='diff'></div><br />
+   <div id='prod'></div><br />
+   <div id='quot'></div><br />
+</div>
+
+<hr/>
+<%= link_to "Back", root_path %>
